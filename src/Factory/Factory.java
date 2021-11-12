@@ -1,6 +1,11 @@
 package Factory;
 
 public interface Factory {
+    default void carType1Producing (){
+        System.out.println("Factory produces" + Sedan.carType);}
+        default void carType2Producing (){
+            System.out.println("Factory produces" + Offroad.carType);
+    }
     Offroad type1 = new Offroad() {
         @Override
         public void drive() {
